@@ -141,14 +141,14 @@ fun GeofenceMapScreen(
                 Spacer(modifier = Modifier.height(8.dp))
 
                 Text(
-                    text = "Radius: ${radius.toInt()} meters",
+                    text = "Radius: ${radius.toInt()} meters (100m - 5000m)",
                     style = MaterialTheme.typography.bodyMedium
                 )
                 Slider(
                     value = radius,
                     onValueChange = { radius = it },
-                    valueRange = 50f..1000f,
-                    steps = 19
+                    valueRange = 100f..5000f,
+                    steps = 48
                 )
 
                 Button(
@@ -170,7 +170,7 @@ fun GeofenceMapScreen(
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))
-                Divider()
+                HorizontalDivider()
                 Spacer(modifier = Modifier.height(12.dp))
 
                 Text(

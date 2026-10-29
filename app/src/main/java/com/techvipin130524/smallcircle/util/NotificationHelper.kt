@@ -50,8 +50,8 @@ object NotificationHelper {
 
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.mipmap.ic_launcher)
-            .setContentTitle("⚠️ Member Left Geofence Area!")
-            .setContentText("$memberName has moved outside the $groupName geofenced region.")
+            .setContentTitle("⚠️ Safe Zone Alert")
+            .setContentText("$memberName has exited the designated safe zone.")
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
